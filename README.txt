@@ -1,7 +1,4 @@
-# UnitySimpleFOW
- Simple Unity Fog of War Shader
- 
- SimpleFOW by Revision3
+SimpleFOW by Revision3
 
 # Introduction
 
