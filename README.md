@@ -10,6 +10,7 @@ SimpleFOW is a shader based static 2D fog of war rendering system intended for u
 # Getting started
 
 1 - Load the SampleScene scene file located in the SimpleFOW folder.
+
 2 - Hit Play then click on the dark square to place points revealing the background.
 
 This process confirms that the shader is working as expected.
@@ -19,9 +20,13 @@ This process confirms that the shader is working as expected.
 To use the shader from scratch : 
 
 1 - Create a new 2D quad mesh and add the fog of war material. You can remove the collider.
+
 2 - Rotate it 180 degrees on the Z axis to make sure UVs are bottom left 0,0 and top right 1,1
+
 3 - Add the FogOfWarShaderControl.cs script component to the object.
+
 4 - Link the game camera that will render the fog of war to the added component.
+
 5 - Specify a maximum amount of reveal points, up to 2047. ( maximum amount of shader array values supported in unity ).
 
 You are now ready to use the FogOfWarShaderControl functions in your own game scripts.
@@ -30,6 +35,7 @@ Begin by creating a public variable slot with the FogOfWarShaderControl type, th
 Then, for instance, when your game is handling the action of a player building a new map revealing structure : 
 
 1 - Use the AddPoint() function with the world position of the structure to add a map revealing point to the list.
+
 2 - Use the SendPoints() funciton next to send the changes to the shader.
 
 Same thing goes for removing a structure by calling RemovePoint() first then SendPoints().
